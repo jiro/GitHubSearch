@@ -1,0 +1,41 @@
+PODS:
+  - Alamofire (4.6.0)
+  - Moya/Core (10.0.2):
+    - Alamofire (~> 4.1)
+    - Result (~> 3.0)
+  - Moya/RxSwift (10.0.2):
+    - Moya/Core
+    - RxSwift (~> 4.0)
+  - Nimble (7.0.3)
+  - Quick (1.2.0)
+  - ReactorKit (1.1.0):
+    - RxSwift (>= 4.0.0)
+  - Result (3.2.4)
+  - RxCocoa (4.1.1):
+    - RxSwift (~> 4.0)
+  - RxSwift (4.1.1)
+  - Stubber (1.1.0)
+
+DEPENDENCIES:
+  - Moya/RxSwift
+  - Nimble
+  - Quick
+  - ReactorKit
+  - RxCocoa (~> 4.0)
+  - RxSwift (~> 4.0)
+  - Stubber
+
+SPEC CHECKSUMS:
+  Alamofire: f41a599bd63041760b26d393ec1069d9d7b917f4
+  Moya: 2b0531a9fef318e0bc484030c3db1e6f279ccb66
+  Nimble: 7f5a9c447a33002645a071bddafbfb24ea70e0ac
+  Quick: 58d203b1c5e27fff7229c4c1ae445ad7069a7a08
+  ReactorKit: 26470a9eff5094fae909a30af0be7cd0cf8a182d
+  Result: d2d07204ce72856f1fd9130bbe42c35a7b0fea10
+  RxCocoa: fd0862fd2df95fa55562ad28ffd2522c25eb4a85
+  RxSwift: c6e3b1c7b325c7d121cd4327e9d98b7ed746b570
+  Stubber: 9ce034a1597dc09fe864c0bb2bed354e79d5d61a
+
+PODFILE CHECKSUM: 64f60eecc7fdab8705d34865f300399e6a9414e3
+
+COCOAPODS: 1.4.0
