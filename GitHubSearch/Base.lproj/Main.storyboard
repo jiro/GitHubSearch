@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Lit-vw-oA7">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="b1g-5E-R06">
+            <objects>
+                <navigationController id="Lit-vw-oA7" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" systemItem="search" id="v0V-sY-3Bm"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="vzJ-0M-id7">
+                        <rect key="frame" x="0.0" y="20" width="375" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="VvB-9C-pvO" kind="relationship" relationship="rootViewController" id="Dsh-tf-DI0"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6Xt-1a-a8r" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-458" y="174"/>
+        </scene>
+        <!--GitHub-->
+        <scene sceneID="sM7-0J-eNy">
+            <objects>
+                <viewController storyboardIdentifier="SearchViewController" id="VvB-9C-pvO" customClass="SearchViewController" customModule="GitHubSearch" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zVA-9C-9aA">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Results" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QCK-hC-lmO">
+                                <rect key="frame" x="146" y="381" width="82.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="f6U-gc-EOh">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <view key="tableFooterView" contentMode="scaleToFill" id="pYE-WG-gfa">
+                                    <rect key="frame" x="0.0" y="72" width="375" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="Vev-KS-Eap">
+                                            <rect key="frame" x="177" y="12" width="20" height="20"/>
+                                        </activityIndicatorView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstItem="Vev-KS-Eap" firstAttribute="centerY" secondItem="pYE-WG-gfa" secondAttribute="centerY" id="3YX-JG-8Ez"/>
+                                        <constraint firstItem="Vev-KS-Eap" firstAttribute="centerX" secondItem="pYE-WG-gfa" secondAttribute="centerX" id="M4d-Wf-OEJ"/>
+                                    </constraints>
+                                </view>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="j6w-rm-guY" detailTextLabel="EYO-ss-5V1" style="IBUITableViewCellStyleSubtitle" id="6op-1c-81U">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6op-1c-81U" id="QQZ-Ww-e5e">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="j6w-rm-guY">
+                                                    <rect key="frame" x="15" y="5" width="33.5" height="20.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="EYO-ss-5V1">
+                                                    <rect key="frame" x="15" y="25.5" width="44" height="14.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="delegate" destination="VvB-9C-pvO" id="Ccq-rE-BgK"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="f6U-gc-EOh" firstAttribute="trailing" secondItem="jkm-zA-3hg" secondAttribute="trailing" id="4ou-ay-1eL"/>
+                            <constraint firstItem="QCK-hC-lmO" firstAttribute="centerX" secondItem="jkm-zA-3hg" secondAttribute="centerX" id="HQo-tH-iy5"/>
+                            <constraint firstItem="QCK-hC-lmO" firstAttribute="centerY" secondItem="jkm-zA-3hg" secondAttribute="centerY" id="e3l-US-pwb"/>
+                            <constraint firstItem="f6U-gc-EOh" firstAttribute="top" secondItem="zVA-9C-9aA" secondAttribute="top" id="je5-oo-CFS"/>
+                            <constraint firstItem="f6U-gc-EOh" firstAttribute="leading" secondItem="jkm-zA-3hg" secondAttribute="leading" id="rDF-bZ-EO6"/>
+                            <constraint firstAttribute="bottom" secondItem="f6U-gc-EOh" secondAttribute="bottom" id="uIa-Vt-DCl"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="jkm-zA-3hg"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="GitHub" id="aMc-fN-I47"/>
+                    <connections>
+                        <outlet property="loadingView" destination="pYE-WG-gfa" id="KNE-dq-Ema"/>
+                        <outlet property="tableView" destination="f6U-gc-EOh" id="rxa-Cj-gHc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="80l-1i-pcl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="334" y="173"/>
+        </scene>
+    </scenes>
+</document>
